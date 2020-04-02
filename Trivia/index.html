@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+   
+    <div class="h1 text-primary text-center mt-5 pt-3">Ice Cream Trivia Game
+    
+        <img src="assets/images/stawberry.jpg" height="240px" class="float-left">
+        <img src="assets/images/chocolate.jpg" height="240px" class="float-right">
+    
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="text-center">
+
+        <div class="timeout" style="display:none">
+
+            <div class="timeout-message">You ran out of time!</div>
+        
+            <br>
+            <button type="button" id="try-btn" class="try-btn start-btn btn-info btn-lg my-3">Try Again</button>
+
+        </div>
+
+    </div>
+
+    <div class="text-center">
+
+        <button type="button" id="start-btn" class="start-btn new-game btn-info btn-lg mb-3">Start the quiz!</button>
+
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="quiz" style="display:none;">
+
+
+    </div>
+
+    
+
+</div>
+    
+</body>
+
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+
+</html>
