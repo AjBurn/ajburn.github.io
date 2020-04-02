@@ -73,10 +73,9 @@ $(document).on("click", "#answer", function(){
         $('.timeout').show();
         $('.timeout-message').html("You answered all questions correctly!");
     }
-    //Find a way to reset the game.
     if (answers == 5) {
         $('.timeout').show();
-       $('.timeout-message').html("<div>You got " + rightAnswer + " right.</div><div>You got " + wrongAnswer + " wrong</div>");
+       $('.timeout-message').html("<div>You got " + rightAnswer + " right!</div><div>You got " + wrongAnswer + " wrong.</div>");
 
        setTimeout(function(){
            resetGame("completed");
@@ -89,9 +88,7 @@ $(document).on("click", "#answer", function(){
 
     
 });
-// Ran out of time, or answered all questions
 
-// completed all five correctly and then timeout time
 function resetGame(type){
     rightAnswer = 0;
     wrongAnswer = 0;
@@ -102,7 +99,7 @@ function resetGame(type){
     $('.quiz').hide();
     $('.time').empty();
 
-    if(type=== "time"){
+    if(type === "time"){
         $('.timeout').show();
         $('.timeout-message').show();
         $('.timeout-message').html("You ran out of time");
@@ -111,23 +108,11 @@ function resetGame(type){
 
     } else {
         $('.new-game').show();
-        $('.timeout-message').hide();
+        $('.timeout-message').show();
     }
-    // Show how many right, and how many wrong, etc
+
     clearInterval(myTimer);
 }
-
-//Code a button that allows you to restart the game when time has run out.
-
-/*
-$(document).on("click", "#try-btn", function(){
-    
-    resetGame("time");
-    $('.timeout').hide();
-    $('#try-btn').hide();
-    $('.quiz').show();
-});*/
-
 
 function writeQuestion(question) {
     if (question != quiz.length){
