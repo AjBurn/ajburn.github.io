@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var food = [ 'cats', 'pizza', 'steak', 'pineapple' ];
+	var food = [ 'burgers', 'pizza', 'steak', 'pineapple' ];
 
 	function renderButtons() {
 		$('#buttonView').empty();
