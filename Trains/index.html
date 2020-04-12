@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>Choo-Choo</title>
+</head>
+
+<body>
+    
+    <div class="container">
+		<div class="jumbotron">
+            <h1 class="text-center">Choo-Choo</h1>
+            <div id="currentTime" class="text-center"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+                        <h3 class="panel-title float-left"><strong>Current Train</strong></h3>
+                        <h3 class="panel-title currentTime"><strong></strong></h3>
+					</div>
+					<div class="panel-body">
+						<table class="table table-hover" id='trainSchedule'>
+							<thead>
+								<tr>
+									<th>Train Name:</th>
+									<th>Destination:</th>
+									<th>Frequency:</th>
+									<th>Next Arrival:</th>
+									<th>Minutes Away:</th>
+								</tr>
+							</thead>
+							<tbody>
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title"><strong>Add a New Train</strong></h3>
+					</div>
+
+					<div class="panel-body">
+						
+						<form>
+							<div class="form-group my-2">
+								<label for="">Train Name</label>
+								<input type="text" class="form-control" id="name" placeholder="Midnight Train">
+							</div>
+
+							<div class="form-group my-2">
+								<label for="">Destination</label>
+								<input type="text" class="form-control" id="destination" placeholder="Anywhere">
+							</div>
+
+							<div class="form-group my-2">
+								<label for="">First Train Time (hh:mm - military time)</label>
+								<input type="text" class="form-control" id="time" placeholder="00:00">
+							</div>
+
+							<div class="form-group my-2">
+								<label for="">Frequency (min)</label>
+								<input type="text" class="form-control" id="frequency" placeholder="30">
+							</div>
+							
+							<button type="submit" class="btn btn-danger" id="submitBtn">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+
+    <script>
+    var firebaseConfig = {
+
+        apiKey: "AIzaSyC1pAIt6hdKvg1ZrWNcg-e-eNnj_3cuqOE",
+
+        authDomain: "train-homework-10093.firebaseapp.com",
+
+        databaseURL: "https://train-homework-10093.firebaseio.com",
+
+        projectId: "train-homework-10093",
+
+        storageBucket: "train-homework-10093.appspot.com",
+
+        messagingSenderId: "857522168060",
+
+        appId: "1:857522168060:web:d5c2515fa6b4fd282e7779",
+
+        measurementId: "G-57JVK0R1KH"
+  };
+
+    firebase.initializeApp(firebaseConfig);
+  </script>
+	<script src="assets/javascript/script.js"></script>
+
+</body>
+
+</html>
