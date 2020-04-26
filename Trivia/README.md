@@ -2,4 +2,4 @@
 
 # Deployed Link
 
-ajburn.github.io/Trivia/
+https://ajburn.github.io/Trivia/
